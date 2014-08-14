@@ -1,4 +1,5 @@
 # The reverse cipher encrypts a message by printing it in reverse order.
+# http://inventwithpython.com/hacking
 
 plainText = 'Three can keep a secret, if two of them are dead.'
 cipherText = ''
