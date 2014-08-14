@@ -1,7 +1,8 @@
 # The reverse cipher encrypts a message by printing it in reverse order.
 # http://inventwithpython.com/hacking
 
-plainText = 'Three can keep a secret, if two of them are dead.'
+# plainText = 'Three can keep a secret, if two of them are dead.'
+plainText = raw_input('Enter Message: ')
 cipherText = ''
 
 i = len(plainText) - 1
