@@ -1,4 +1,7 @@
 # This is a guess the number game.
+# http://inventwithpython.com (BSD Licensed)
+# * forked by Jared Wiese
+
 import random
 
 guessesTaken = 0
