@@ -5,11 +5,16 @@
 import pyperclip
 
 # the string to be encrypted/decrypted
-# message = 'Men willingly believe what they wish.' # test message
+# message = "Cry 'Havoc', and let slip the dogs of war;" # test message
+# message = message.upper() # uncomment this line also for test
 message = raw_input('Enter Text ').upper()
 
 # the encryption/decryption key
-key = int(raw_input('Key '))
+while True:
+    key = raw_input('Enter key: ')
+    if key.isdigit():
+        key = int(key)
+        break
 
 # tells the program to encrypt or decrypt
 while True:
