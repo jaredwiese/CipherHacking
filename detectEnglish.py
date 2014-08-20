@@ -5,9 +5,9 @@
 # To use, type this code:
 # import detectEnglish
 # detectEnglish.isEnglish(someString) # returns True or False
-# (There must be a "words.txt" file in this directory with all English
+# There must be a "words.txt" file in this directory with all English
 # words in it, one word per line. You can download this from
-# http://invpy.com/words.txt)
+# http://invpy.com/words.txt
 
 UPPERLETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 LETTERS_AND_SPACE = UPPERLETTERS + UPPERLETTERS.lower() + ' \t\n'
