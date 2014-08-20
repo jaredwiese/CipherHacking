@@ -57,5 +57,3 @@ print translated
 
 # copy the encrypted/decrypted string to the clipboard
 pyperclip.copy(translated)
-
-exit()
