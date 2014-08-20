@@ -1,6 +1,6 @@
 # Transposition Cipher Encryption
 # http://inventwithpython.com/hacking (BSD Licensed)
-# * forked by Jared Wiese
+# * Forked by Jared Wiese
 
 import pyperclip
 
