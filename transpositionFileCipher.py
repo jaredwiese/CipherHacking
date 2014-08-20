@@ -1,6 +1,6 @@
 # Transposition Cipher Encrypt/Decrypt File
 # http://inventwithpython.com/hacking (BSD Licensed)
-# * forked by Jared Wiese
+# * Forked by Jared Wiese
 
 import time, os, sys, transpositionEncrypt, transpositionDecrypt
 
