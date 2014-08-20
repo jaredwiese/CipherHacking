@@ -6,19 +6,20 @@ import time, os, sys, transpositionEncrypt, transpositionDecrypt
 
 
 def main():
-    # inputFilename = 'frankenstein.encrypted.txt'
+    # Must be text file!
+    # inputFilename = 'beowulf.txt' # test file
     inputFilename = raw_input('File Name: ')
     # BE CAREFUL! If a file with the outputFilename name
     # already exists, this program will overwrite that file.
-    #outputFilename = 'frankenstein.txt'
+    #outputFilename = 'beowulf.encrypted.txt' # test file
     outputFilename = raw_input('File Name: ')
-    # myKey = 10
+    # myKey = 10 # test key
     while True:
         myKey = raw_input('Enter Key: ')
         if key.isdigit():
             key = int(key)
             break
-    # myMode = 'decrypt' # set to 'encrypt' or 'decrypt'
+    # myMode = 'encrypt'
     while True:
         myMode = raw_input('Encrypt or Decrypt? ').lower()
         if myMode.strip() == 'encrypt' or myMode.strip() == 'decrypt':
