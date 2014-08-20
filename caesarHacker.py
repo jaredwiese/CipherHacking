@@ -32,5 +32,3 @@ for key in range(len(LETTERS)):
             
     # display the current key being tested along with its decryption
     print 'Key ' + str(key) + ': ' + translated
-    
-exit()
