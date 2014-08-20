@@ -6,23 +6,23 @@ import time, os, sys, transpositionEncrypt, transpositionDecrypt
 
 
 def main():
-    # Must be text file!
-    # inputFilename = 'beowulf.txt' # test file
-    inputFilename = raw_input('File Name: ')
+    # MUST be a Text File!
+    # inputFilename = 'beowulf.txt'
+    inputFilename = raw_input('Input File Name: ')
     # BE CAREFUL! If a file with the outputFilename name
     # already exists, this program will overwrite that file.
-    #outputFilename = 'beowulf.encrypted.txt' # test file
-    outputFilename = raw_input('File Name: ')
-    # myKey = 10 # test key
+    #outputFilename = 'beowulf.encrypted.txt'
+    outputFilename = raw_input('Output File Name: ')
+    
     while True:
-        myKey = raw_input('Enter Key: ')
+        key = raw_input('Enter Key: ')
         if key.isdigit():
             key = int(key)
             break
-    # myMode = 'encrypt'
+    
     while True:
-        myMode = raw_input('Encrypt or Decrypt? ').lower()
-        if myMode.strip() == 'encrypt' or myMode.strip() == 'decrypt':
+        mode = raw_input('Encrypt or Decrypt? ').lower()
+        if mode.strip() == 'encrypt' or mode.strip() == 'decrypt':
             break
     
     # If the input file does not exist, then the program terminates early.
@@ -42,23 +42,23 @@ def main():
     content = fileObj.read()
     fileObj.close()
     
-    print'%sing...' % (myMode.title())
+    print'%sing...' % (mode.title())
     
     # Measure how long the encryption/decryption takes.
     startTime = time.time()
-    if myMode == 'encrypt':
-        translated = transpositionEncrypt.encryptMessage(myKey, content)
-    elif myMode == 'decrypt':
-        translated = transpositionDecrypt.decryptMessage(myKey, content)
+    if mode == 'encrypt':
+        translated = transpositionEncrypt.encryptMessage(key, content)
+    elif mode == 'decrypt':
+        translated = transpositionDecrypt.decryptMessage(key, content)
     totalTime = round(time.time() - startTime, 2)
-    print '%sion time: %s seconds' % (myMode.title(), totalTime)
+    print '%sion time: %s seconds' % (mode.title(), totalTime)
     
     # Write out the translated message to the output file.
     outputFileObj = open(outputFilename, 'w')
     outputFileObj.write(translated)
     outputFileObj.close()
-    print 'Done %sing %s (%s characters).' % (myMode, inputFilename, len(content))
-    print '%sed file is %s.' % (myMode.title(), outputFilename)
+    print 'Done %sing %s (%s characters).' % (mode, inputFilename, len(content))
+    print '%sed file is %s.' % (mode.title(), outputFilename)
 
 # If transpositionCipherFile.py is run (instead of imported as a module)
 # call the main() function.
