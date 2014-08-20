@@ -51,5 +51,3 @@ def encryptMessage(key, message):
 # call the main() function.
 if __name__ == '__main__':
     main()
-    
-exit()
