@@ -1,6 +1,6 @@
 # Transposition Cipher Test
 # http://inventwithpython.com/hacking (BSD Licensed)
-# * forked by Jared Wiese
+# * Forked by Jared Wiese
 
 import random, sys
 from transpositionEncrypt import encryptMessage
