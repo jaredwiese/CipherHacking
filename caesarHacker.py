@@ -1,6 +1,6 @@
 # Caesar Cipher Hacker
 # http://inventwithpython.com/hacking (BSD Licensed)
-# forked by Jared Wiese
+# Forked by Jared Wiese
 
 # cipherText = 'The enemy knows the system.' # practice cipherText
 cipherText = raw_input('cipherText: ')
