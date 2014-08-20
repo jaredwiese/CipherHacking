@@ -48,5 +48,3 @@ elif game == 'no' or game == 'n':
 else:
     print "I'm sorry, I don't understand that."
     print ''
-
-exit()
