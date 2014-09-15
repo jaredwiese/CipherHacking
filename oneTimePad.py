@@ -9,11 +9,11 @@ LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 
 def main():
-    # message = """'Deciphering is, in my opinion, one of the most fascinating of arts, and I fear I have wasted upon it more time than it deserves. I practised it in its simplest form when I was at school. The bigger boys made ciphers, but if I got hold of a few words, I usually found out the key. The consequence of this ingenuity was occasionally painful: the owners of the detected ciphers sometimes thrashed me, though the fault really lay in their own stupidity. There is a kind of maxim amongst the craft of decipherers ..., that every cipher can be deciphered. I am myself inclined to think that deciphering is an affair of time, ingenuity, and patience; and that very few ciphers are worth the trouble of unravelling them.' -Charles Babbage"""
+    message = """'Deciphering is, in my opinion, one of the most fascinating of arts, and I fear I have wasted upon it more time than it deserves. I practised it in its simplest form when I was at school. The bigger boys made ciphers, but if I got hold of a few words, I usually found out the key. The consequence of this ingenuity was occasionally painful: the owners of the detected ciphers sometimes thrashed me, though the fault really lay in their own stupidity. There is a kind of maxim amongst the craft of decipherers ..., that every cipher can be deciphered. I am myself inclined to think that deciphering is an affair of time, ingenuity, and patience; and that very few ciphers are worth the trouble of unravelling them.' -Charles Babbage"""
     
     # mode = 'decrypt' # test: set to 'encrypt' or 'decrypt'
 
-    message = raw_input('Enter Text: ')
+    # message = raw_input('Enter Text: ')
         
     while True:
         mode = raw_input('Encrypt or Decrypt? ').lower()
@@ -36,6 +36,16 @@ def main():
                 break
             elif key.lower() == 'r':
                 key = randomChar(count)
+                print key
+                print ''
+                print 'Your Key will be saved to a text file in this Folder.'
+                keyFile = raw_input('Enter File Name for Key: ')
+                try: 
+                    file = open(keyFile, 'a')
+                    file.write('%s' % (key))
+                    file.close()
+                except:
+                    print 'Sorry. Writing Key to Text File failed.'
                 break
             else:
                 print "I'm sorry. That's not quite right."
@@ -47,17 +57,8 @@ def main():
     print '%sed Message:' % mode.title()
     print translated
     pyperclip.copy(translated)
-    print key
     print ''
     print 'The message has been copied to the clipboard.'
-    print 'Your Key will be saved to a text file in this Folder.'
-    keyFile = raw_input('Enter File Name for Key: ')
-    try: 
-        file = open(keyFile, 'a')
-        file.write('%s' % (key))
-        file.close()
-    except:
-        print 'Sorry. Writing Key to Text File failed.'
 
 
 def randomChar(j):
